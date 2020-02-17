@@ -6,19 +6,22 @@
         <p>{{error}}</p>
         {{else}}
 
-{  
-    "data":  
+{
+  "data": {
+    "videos": [ 
                     {{#each meta.formats}}
 
-      {                  
-        "url":        "{{url}}",   
-        "qul":      "{{format_note}}",   
-        "size":    "{{filesize}}"  
-    },  
+       {
+        "url": " {{url}}",
+        "format": "{{format_note}}",
+        "size": "{{filesize}}"
+      },  
 
 
 
                     {{/each}}
-} 
+  ]
+  }
+}
         {{/if}}
 
