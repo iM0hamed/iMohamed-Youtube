@@ -1,6 +1,9 @@
 
         {{#if error}}
-        <p>{{error}}</p>
+        {
+  "data": {
+  "error": "error"
+  }}
         {{else}}
 
 {
@@ -9,7 +12,7 @@
                     {{#each meta.formats}}
 
        {
-        "url": " {{url}}",
+        "url": "{{url}}",
         "format": "{{format_note}}",
         "size": "{{filesize}}"
       },  
