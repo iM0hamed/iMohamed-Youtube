@@ -5,7 +5,7 @@ var request = require('request');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Youtube Downloader Web App' });
+    res.render('index', { title: 'Youtube Downloader Web App - iM0hamed' });
 });
 
 // convert to human readable format
