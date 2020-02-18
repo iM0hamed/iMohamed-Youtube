@@ -21,11 +21,12 @@ function bytesToSize(bytes) {
 router.get('/v', function(req, res, next) {
     var url = req.url,
   
-    console.log('url');
-    console.log(url);
         formats = [],
         pattern = /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/;
 
+    console.log("url");
+    console.log(url);
+    
     request.get(url, function (err, resp, body) {
         // check if it is valid url
         if(pattern.test(resp.request.uri.href)) {
