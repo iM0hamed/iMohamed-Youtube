@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var ytdl = require('youtube-dl');
-//var request = require('request');
+var request = require('request');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -17,7 +17,7 @@ function bytesToSize(bytes) {
 };
 
 
-router.get('/video', function(req, res, next) {
+router.post('/video', function(req, res, next) {
     var url = req.body.url,
         formats = [],
         pattern = /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/;
