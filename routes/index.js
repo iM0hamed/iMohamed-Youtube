@@ -28,6 +28,7 @@ function getUrlVars() {
 router.get('/v', function(req, res, next) {
     //var url = req.body.url,
     var url = getUrlVars()["x"];
+    console.log('url');
     console.log(url);
         formats = [],
         pattern = /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/;
