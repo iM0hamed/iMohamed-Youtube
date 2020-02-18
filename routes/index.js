@@ -17,7 +17,7 @@ function bytesToSize(bytes) {
 };
 
 
-router.post('/video', function(req, res, next) {
+router.get('/video', function(req, res, next) {
     var url = req.body.url,
         formats = [],
         pattern = /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/;
