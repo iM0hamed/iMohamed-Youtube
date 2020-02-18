@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var ytdl = require('youtube-dl');
 var request = require('request');
-var window = require('window');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Youtube Downloader Web App - iM0hamed' });
@@ -16,18 +16,11 @@ function bytesToSize(bytes) {
    return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
 };
 
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-}
 
 
 router.get('/v', function(req, res, next) {
-    //var url = req.body.url,
-    var url = getUrlVars()["x"];
+    var url = req.url,
+  
     console.log('url');
     console.log(url);
         formats = [],
